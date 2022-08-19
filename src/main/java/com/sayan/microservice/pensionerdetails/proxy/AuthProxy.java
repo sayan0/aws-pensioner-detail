@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 @FeignClient(name = "auth", url = "${AUTH_MICROSERVICE_URI:http://localhost:4000}")
 public interface AuthProxy {
 	
-	    @GetMapping("/authorize")
+	    @GetMapping("/auth/authorize")
 	    public ResponseEntity<Boolean> onAuthorization(@RequestHeader("Authorization") String token);
 	
 }
