@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+    - TargetService:
+          Type: AWS::ECS::Service
+          Properties:
+              TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/sayan012-aws-pensioner-detail:2"
+              LoadBalancerInfo:
+                  ContainerName: "sayan012-aws-pensioner-detail"
+                  ContainerPort: 5000
+              PlatformVersion: "LATEST"
