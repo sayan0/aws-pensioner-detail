@@ -10,5 +10,4 @@ public interface AuthProxy {
 	
 	    @GetMapping("/auth/authorize")
 	    public ResponseEntity<Boolean> onAuthorization(@RequestHeader("Authorization") String token);
-	
 }
